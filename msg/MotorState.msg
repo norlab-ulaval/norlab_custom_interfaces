@@ -1,5 +1,6 @@
 std_msgs/Header header
 
-std_msgs/Float32 current        # (A)
-std_msgs/Float32 voltage        # (V)
-std_msgs/Float32 duty           # (%)
+float32 current        # (A)
+float32 voltage        # (V)
+float32 duty           # (%)
+float32 temperature    # (°C)
