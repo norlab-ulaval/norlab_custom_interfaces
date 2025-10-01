@@ -10,16 +10,22 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/EncoderState.msg"
+  "msg/FollowerOptions.msg"
   "msg/MotorState.msg"
-  DEPENDENCIES std_msgs
+  "srv/LoadMapTraj.srv"
+  "srv/PlayLoop.srv"
+  "srv/SaveMapTraj.srv"
+  "action/FollowPath.action"
+  DEPENDENCIES std_msgs geometry_msgs nav_msgs
 )
 
 include_directories(
-        ${norlab_custom_interfaces_INCLUDE_DIRS}
+  ${norlab_custom_interfaces_INCLUDE_DIRS}
 )
 
 ament_package()
