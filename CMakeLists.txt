@@ -17,9 +17,11 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/EncoderState.msg"
   "msg/FollowerOptions.msg"
   "msg/MotorState.msg"
+  "msg/BatteryLog.msg"
   "srv/LoadMapTraj.srv"
   "srv/PlayLoop.srv"
   "srv/SaveMapTraj.srv"
+  "srv/ExportData.srv"
   "action/FollowPath.action"
   DEPENDENCIES std_msgs geometry_msgs nav_msgs
 )
