@@ -1,0 +1,15 @@
+## Request to take a picture at a specified position
+
+geometry_msgs/Pose target_pose
+
+---
+# RESULT DEFINITION
+
+std_msgs/UInt32 result_status
+grid_map_msgs/GridMap costmap
+
+---
+# FEEDBACK DEFINITION
+
+std_msgs/UInt32 feedback_status
+
