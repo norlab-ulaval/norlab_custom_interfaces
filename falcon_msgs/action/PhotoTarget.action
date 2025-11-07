@@ -1,5 +1,7 @@
 ## Request to take a picture at a specified position
 
+# Position is expected in WGS84 with ellipsoid height
+# Orientation is a quaternion relative to the ENU frame
 geometry_msgs/Pose target_pose
 
 ---
