@@ -1,0 +1,5 @@
+# Request
+---
+# Response
+bool success  # indicate successful run of triggered service
+uint8 data   # returned string

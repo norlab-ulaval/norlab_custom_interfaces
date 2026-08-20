@@ -1,0 +1,6 @@
+# Request
+string file_path   # Absolute file path.
+---
+# Response
+bool success       # True if file processing was successful.
+string message     # Response based on the result of the operation.

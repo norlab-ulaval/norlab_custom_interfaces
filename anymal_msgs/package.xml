@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>anymal_msgs</name>
+  <version>0.6.24</version>
+  <description>Messages and services for ANYmal, vendored (ROS1) from ANYbotics' anymal_msgs -- the low-level msgs published by the LPC (e.g. AnymalState).</description>
+  <maintainer email="william.fecteau@norlab.ulaval.ca">William Fecteau</maintainer>
+  <license>Proprietary</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <depend>any_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+</package>

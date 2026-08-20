@@ -1,0 +1,6 @@
+# Request
+string frame_id   # frame to get the position in
+---
+# Response
+bool success  # indicate successful run of triggered service
+geometry_msgs/Pose pose # returned pose
