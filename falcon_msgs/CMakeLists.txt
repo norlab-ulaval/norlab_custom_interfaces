@@ -1,21 +1,32 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.5.1)
 project(falcon_msgs)
 
-## Compile as C++17
-set(CMAKE_CXX_STANDARD 17)
-
-## Find libraries
-find_package(ament_cmake REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(geometry_msgs REQUIRED)
-find_package(grid_map_msgs REQUIRED)
-find_package(builtin_interfaces REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-
-## Generate custom messages
-rosidl_generate_interfaces(${PROJECT_NAME}
-	"action/PhotoTarget.action"
-	DEPENDENCIES std_msgs geometry_msgs grid_map_msgs builtin_interfaces
+find_package(catkin REQUIRED
+  COMPONENTS
+    message_generation
+    std_msgs
+    geometry_msgs
+    grid_map_msgs
+    actionlib_msgs
 )
 
-ament_package()
+add_action_files(
+  FILES
+    PhotoTarget.action
+)
+generate_messages(
+  DEPENDENCIES
+    std_msgs
+    geometry_msgs
+    grid_map_msgs
+    actionlib_msgs
+)
+
+catkin_package(
+  CATKIN_DEPENDS
+    message_runtime
+    std_msgs
+    geometry_msgs
+    grid_map_msgs
+    actionlib_msgs
+)

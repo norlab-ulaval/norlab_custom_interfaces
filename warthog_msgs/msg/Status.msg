@@ -7,8 +7,8 @@ std_msgs/Header header
 string hardware_id
 
 # Times since MCU power-on and MCU rosserial connection, respectively.
-builtin_interfaces/Duration mcu_uptime
-builtin_interfaces/Duration connection_uptime
+duration mcu_uptime
+duration connection_uptime
 
 # Temperature of MCU in Celsius.
 float32 mcu_temperature

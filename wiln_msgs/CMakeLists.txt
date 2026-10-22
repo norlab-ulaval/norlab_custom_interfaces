@@ -1,21 +1,21 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.5.1)
 project(wiln_msgs)
 
-## Compile as C++17
-set(CMAKE_CXX_STANDARD 17)
-
-## Find libraries
-find_package(ament_cmake REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(builtin_interfaces REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-
-## Generate custom messages
-rosidl_generate_interfaces(${PROJECT_NAME}
-	"srv/LoadMapTraj.srv"
-	"srv/SaveMapTraj.srv"
-	"srv/PlayLoop.srv"
-	DEPENDENCIES std_msgs builtin_interfaces
+find_package(catkin REQUIRED
+  COMPONENTS
+    message_generation
 )
 
-ament_package()
+add_service_files(
+  FILES
+    LoadMapTraj.srv
+    PlayLoop.srv
+    SaveMapTraj.srv
+)
+generate_messages(
+)
+
+catkin_package(
+  CATKIN_DEPENDS
+    message_runtime
+)
